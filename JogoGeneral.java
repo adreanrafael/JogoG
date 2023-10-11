@@ -1,11 +1,18 @@
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
+=======
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
 /**
  *
  * @author adrea
  */
+<<<<<<< HEAD
 public class JogoGeneral implements Serializable {  // declaracao de classe 
+=======
+public class JogoGeneral {  // declaracao de classe 
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
 
     private final Dado[] dados = new Dado[5];   // vetor com os 5 dados de tamnho constante
     private int SomaDados;  // variavel contadora para armazenar a soma das faces voltadas para cima
@@ -29,7 +36,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
         }
     }
 
+<<<<<<< HEAD
     public int[] getJogadas() {   // metoro getter para vetor jogadas
+=======
+    public int[] getJogadados() {   // metoro getter para vetor jogadas
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
         return jogadas;
     }
 
@@ -45,7 +56,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
         for (int i = 0; i < dados.length; i++) {    //esse trecho ordena o vetor que contem os valores das faces voltadas para cima pelo metodo bolha
             for (int j = 0; j < i; j++) {
                 if (dados[j].getSideUp() > dados[i].getSideUp()) {
+<<<<<<< HEAD
                     int aux = dados[j].getSideUp();
+=======
+                    int aux = dados[j].getSideUp();    
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                     dados[j].setSideUp(dados[i].getSideUp());
                     dados[i].setSideUp(aux);
                 }
@@ -64,7 +79,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
     public boolean validarJogada(int num) { // metodo que verifica se uma jogada pontua ou nao(true ou false) para o conjunto de dados encapsulado
         if (num <= 6 && num > 0) {  // verifica as jogadas de 1 a 6
             for (int i = 0; i < dados.length; i++) {    // percorre os elementos vetor de dados e se o numero da jogada aparecer uma vez ja retorna verdadeiro
+<<<<<<< HEAD
                 if (dados[i].getSideUp() == num) {
+=======
+                if (dados[i].getSideUp() == num) {       
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                     return true;
                 }
             }
@@ -74,10 +93,17 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
             // cada variavel contadora armazena a ocorrencia de uma valor de face do dado no vetor de dados
             for (int i = 0; i < dados.length; i++) {    // percorre o vetor de dados
                 // verificar cada elemento do vetor de dados e atribuir +1 para sua respectiva variavel contadora
+<<<<<<< HEAD
                 switch (dados[i].getSideUp()) {
                     case 1 ->
                         n1++;
                     case 2 ->
+=======
+                switch (dados[i].getSideUp()) {     
+                    case 1 ->
+                        n1++;
+                    case 2 ->               
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                         n2++;
                     case 3 ->
                         n3++;
@@ -91,7 +117,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
                     }
                 }
                 // verificar se a ocorrencia é maior ou igual a 3 e retorna verdadeiro
+<<<<<<< HEAD
                 if (n1 >= 3 || n2 >= 3 || n3 >= 3 || n4 >= 3 || n5 >= 3 || n6 >= 3) {
+=======
+                if (n1 >= 3 || n2 >= 3 || n3 >= 3 || n4 >= 3 || n5 >= 3 || n6 >= 3) { 
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                     return true;
                 }
             }
@@ -144,8 +174,14 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
                         n6++;
                     default -> {
                     }
+<<<<<<< HEAD
                 }// verificar se a ocorrencia de algum valor de face é maior ou igual a 3 e se outro valor é meior ou igual a 2 e retorna verdadeiro
                 if ((n1 == 3 || n2 == 3 || n3 == 3 || n4 == 3 || n5 == 3 || n6 == 3) && (n1 == 2 || n2 == 2 || n3 == 2 || n4 == 2 || n5 == 2 || n6 == 2)) {
+=======
+                }
+                // verificar se a ocorrencia de algum valor de face é maior ou igual a 3 e se outro valor é meior ou igual a 2 e retorna verdadeiro
+                if ((n1 >= 3 || n2 >= 3 || n3 >= 3 || n4 >= 3 || n5 >= 3 || n6 >= 3) && (n1 >= 2 || n2 >= 2 || n3 >= 2 || n4 >= 2 || n5 >= 2 || n6 >= 2)) {
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                     return true;
                 }
             }
@@ -240,7 +276,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
         if (j >= 1 && j <= 6) { // pontua jogadas de 1 a 6 no vetor de jogadas
             if (validarJogada(j) == true) { // verificar se a jodada e valida
                 int cont = 0; // variavael contaroa auxiliar para armazenar ocorrencia
+<<<<<<< HEAD
                 for (int i = 0; i < dados.length; i++) {
+=======
+                for (int i = 0; i < dados.length; i++) {  
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
                     if (dados[i].getSideUp() == j) {
                         cont++;     // contar occorrencia do valor ecolhido
                     }
@@ -272,7 +312,11 @@ public class JogoGeneral implements Serializable {  // declaracao de classe
                     System.out.println("Jogada já realizada!");
                 }
             }
+<<<<<<< HEAD
             // repete o mesmo procedimento do caso acima para as outras jogadas
+=======
+
+>>>>>>> 5979ab46f578c078c46478b700133d63ee424b45
         } else if (j == 8) {
             if (validarJogada(j) == true) {
                 if (jogadas[j - 1] == -1) {
